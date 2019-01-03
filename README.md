@@ -55,7 +55,7 @@ composer update
 ## Build
 
 ### 1. Prepare application
-- go to `example-helloworld/development`
+- go to `example-helloworld-portable/development`
 - clear everything in `./Var/Tmp/`
 - change `$app->Run();` to `$app->Run(1);` in `./index.php`
 - visit all aplication routes where are different JS/CSS bundles 
@@ -66,24 +66,24 @@ composer update
 
 #### Linux:
 ```shell
-# go to project root dir
-cd example-helloworld
+# go to project build dir
+cd example-helloworld-portable/build
 # run build process into single PHP file
 sh make.sh
 ```
 
 #### Windows:
 ```shell
-# go to project root dir
-cd example-helloworld
+# go to project build dir
+cd example-helloworld-portable/build
 # run build process into single PHP file
 make.cmd
 ```
 
 #### Browser:
 ```shell
-# visit script `make-php.php` in your project root directory:
-http://localhost/example-helloworld/make-php.php
+# visit script `make-php.php` in your project build directory:
+http://localhost/example-helloworld-portable/build/make-php.php
 # now run your result in:
-http://localhost/example-helloworld/release/
+http://localhost/example-helloworld-portable/release/
 ```
