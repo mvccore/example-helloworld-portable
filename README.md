@@ -54,7 +54,7 @@ composer update
 
 ## Build
 
-### 1. Prepare application
+### 1. Prepare Application
 - go to `example-helloworld-portable/development`
 - clear everything in `./Var/Tmp/`
 - change `$app->Run();` to `$app->Run(1);` in `./index.php`
@@ -62,7 +62,7 @@ composer update
   groups to generate `./Var/Tmp/` content for result app
 - run build process
 
-### 2. Build
+### 2. Run Build Process
 
 #### Linux:
 ```shell
