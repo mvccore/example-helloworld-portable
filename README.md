@@ -5,9 +5,25 @@
 [![Packager Build](https://img.shields.io/badge/Packager%20Build-passing-brightgreen.svg?style=plastic)](https://github.com/mvccore/packager)
 ![PHP Version](https://img.shields.io/badge/PHP->=5.3-brightgreen.svg?style=plastic)
 
-- [**MvcCore**](https://github.com/mvccore/mvccore) very basic application and packaging demonstration.
+- [**MvcCore**](https://github.com/mvccore/mvccore) [Hello World (`mvccore/example-helloworld`)](https://github.com/mvccore/example-helloworld) example packaging demonstration.
+
+## Instalation
+```shell
+# load example
+composer create-project mvccore/example-helloworld
+
+# go to project development dir
+cd example-helloworld/development
+
+# update dependencies for app development sources
+composer update
+```
+
+## Packed Result Features
+
 - **Result** is **completly portable** - `./release/index.php`
-- Result application **currently packed in strict package mode**, all packing configurations included in `./.packager/`
+- Result application is **currently packed in strict package mode**
+- All packing configurations are included in `./build/configs` directory
 - Packed with [**Packager library - mvccore/packager**](https://github.com/mvccore/packager)), all packing ways possible:
   - **PHAR file**
     - standard PHAR package with whole devel dir content
@@ -29,18 +45,6 @@
       - result `index.php` file contains only PHP files, 
         but PHTML templates, all CSS/JS/fonts and images are on HDD
       - no PHP file system function is wrapped
-
-## Instalation
-```shell
-# load example
-composer create-project mvccore/example-helloworld
-
-# go to project development dir
-cd example-helloworld/development
-
-# update dependencies for app development sources
-composer update
-```
 
 ## Build
 
