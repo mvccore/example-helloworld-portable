@@ -30,7 +30,7 @@ composer update
 - **Result** is **completly portable** - `./release/index.php`
 - Result application is **currently packed in strict package mode**
 - All packing configurations are included in `./build/configs` directory
-- Packed with [**Packager library (`mvccore/packager`)**](https://github.com/mvccore/packager)), all packing ways possible:
+- Packed with [**Packager library (`mvccore/packager`)**](https://github.com/mvccore/packager), all packing ways possible:
   - **PHAR file**
     - standard PHAR package with whole devel dir content
   - **PHP file**
