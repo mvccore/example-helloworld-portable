@@ -9,13 +9,19 @@ MvcCore [Hello World (`mvccore/example-helloworld`)](https://github.com/mvccore/
 
 ## Instalation
 ```shell
-# load example
-composer create-project mvccore/example-helloworld
+# load hello world portable project structure
+composer create-project mvccore/example-helloworld-portable
 
-# go to project development dir
-cd example-helloworld/development
+# go to portable project directory
+cd example-helloworld-portable
 
-# update dependencies for app development sources
+# load hello world project
+composer create-project mvccore/example-helloworld ./development
+
+# go to hello world project directory
+cd ./development
+
+# update dependencies for hello world development sources
 composer update
 ```
 
