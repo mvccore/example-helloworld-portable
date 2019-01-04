@@ -10,9 +10,9 @@ $config = [
 		"#/\.#",										// Everything started with '.' (.git, .htaccess ...)
 		"#^/web\.config#",								// Microsoft IIS .rewrite rules
 		"#^/Var/Logs/.*#",								// App development logs
-		"#composer(.*)(json|lock)#",					// composer.json, composer.lock, composer.dev.json and  composer.dev.lock
-		"#LICEN(C|S)E\.(txt|TXT|md|MD)#",				// libraries licence files
-		"#\.(bak|bat|cmd|sh|md|phpt|phpproj|phpproj.user)$#",
+		"#(composer|installed)\.((dev\.)?)(json|lock)#",// composer.json, installed.json, composer.lock, ...
+		"#LICEN(C|S)E(\.(txt|md))?#i",					// libraries licence files
+		"#\.(bak|bat|cmd|sh|md|phpt|phpproj|phpproj\.user)$#i",
 
 		// Exclude specific PHP libraries
 		"#^/vendor/composer/.*#",						// composer itself
@@ -20,7 +20,6 @@ $config = [
 		"#^/vendor/mvccore/mvccore/src/startup\.php$#",	// mvccore autoload file
 		"#^/vendor/tracy/.*#",							// tracy library (https://tracy.nette.org/)
 		"#^/vendor/mvccore/ext-debug-tracy.*#",			// mvccore tracy adapter and all tracy panel extensions
-		"#^/vendor/nette/safe-stream.*#",				// nette safe stream used to complete assets in cache
 		"#^/vendor/mrclay/.*#",							// HTML/JS/CSS minify library
 
 		// Exclude source css and js files, use only what is generated in '/Var/Tmp' dir
@@ -28,16 +27,18 @@ $config = [
 		"#^/static/css#",
 	],
 	// include all scripts or files, where it's relative path from sourceDir match any of these rules:
-	// (include paterns always overides exclude patterns)
+	// (include patterns always overrides exclude patterns)
 	'includePatterns'		=> [],
-	// process simple strings replacements on all readed PHP scripts before saving into result package:
-	// (replacements are executed before configured minification in RAM, they don't affect anythin on hard drive)
+	// process simple strings replacements on all read PHP scripts before saving into result package:
+	// (replacements are executed before configured minification in RAM, they don't affect anything on hard drive)
 	'stringReplacements'	=> [
 		// Switch \MvcCore application back from SFU mode to automatic compile mode detection
-		'->Run(1);'		=> '->Run();',
+		'->Run(1);'									=> '->Run();',
+		'->Run(TRUE);'								=> '->Run();',
+		'->Run(true);'								=> '->Run();',
 		// Remove tracy debug library:
 		"class_exists('\MvcCore\Ext\Debugs\Tracy')"	=> 'FALSE',
 	],
-	'minifyTemplates'		=> 1,// Remove non-conditional comments and whitespaces
-	'minifyPhp'				=> 1,// Remove comments and whitespaces
+	'minifyTemplates'		=> 1,// Remove non-conditional comments and white spaces
+	'minifyPhp'				=> 1,// Remove comments and white spaces
 ];
