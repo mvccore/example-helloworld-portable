@@ -5,14 +5,14 @@
 [![Packager Build](https://img.shields.io/badge/Packager%20Build-passing-brightgreen.svg?style=plastic)](https://github.com/mvccore/packager)
 ![PHP Version](https://img.shields.io/badge/PHP->=5.4-brightgreen.svg?style=plastic)
 
-MvcCore [Hello World (`mvccore/example-helloworld`)](https://github.com/mvccore/example-helloworld) example packaging demonstration.
+Skeleton for MvcCore [Hello World (`mvccore/example-helloworld`)](https://github.com/mvccore/example-helloworld) example portable packing/building.
 
 ## Instalation
 ```shell
-# load hello world portable project structure
+# load hello world portable project skeleton
 composer create-project mvccore/example-helloworld-portable
 
-# go to portable project directory
+# go to portable project skeleton directory
 cd example-helloworld-portable
 
 # load hello world project
@@ -27,12 +27,12 @@ composer update
 
 ## Packed Result Features
 
-- **Result** is **completly portable** - `./example-helloworld-portable/release/index.php`
+- **Result** is **completelly portable** - `./example-helloworld-portable/release/index.php`
 - Result application is **currently packed in strict package mode**
 - All packing configurations are included in `./build/configs` directory
 - Packed with [**Packager library (`mvccore/packager`)**](https://github.com/mvccore/packager), all packing ways possible:
   - **PHAR file**
-    - standard PHAR package with whole devel dir content
+    - standard PHAR package with whole development directory content
   - **PHP file**
     - **strict package**
       - everything is contained in result `index.php`
@@ -58,7 +58,7 @@ composer update
 - go to `example-helloworld-portable/development`
 - clear everything in `./Var/Tmp/`
 - change `$app->Run();` to `$app->Run(1);` in `./index.php`
-- visit all aplication routes where are different JS/CSS bundles 
+- visit all application routes where are different JS/CSS bundles 
   groups to generate `./Var/Tmp/` content for result app
 - run build process
 
