@@ -31,5 +31,5 @@
 
 
 	Packager_Php::Create($config)
-		->SetPhpFileSystemMode(Packager_Php::FS_MODE_STRICT_PACKAGE)
+		->SetPhpFileSystemMode($phpFileSystemMode)
 		->Run();

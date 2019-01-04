@@ -1,5 +1,7 @@
 <?php
 
+$phpFileSystemMode = Packager_Php::FS_MODE_STRICT_PACKAGE;
+
 $config = [
 	'sourcesDir'				=> __DIR__ . '/../../development',
 	'releaseFile'				=> __DIR__ . '/../../release/index.php',

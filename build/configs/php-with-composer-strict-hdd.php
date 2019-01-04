@@ -9,6 +9,8 @@
 // and you need to uncomment line 22 in Bootstrap.php
 // before compilation to generate css/js files properly in tmp
 
+$phpFileSystemMode = Packager_Php::FS_MODE_STRICT_HDD;
+
 $config = [
 	'sourcesDir'				=> __DIR__ . '/../../development',
 	'releaseFile'				=> __DIR__ . '/../../release/index.php',
