@@ -1,6 +1,6 @@
 {
 	"name": "mvccore/example-helloworld-portable",
-	"type": "application",
+	"type": "project",
 	"description": "MvcCore Example - Hello World [portable] - basic application packing demonstration.",
 	"keywords": [
 		"mvccore", 

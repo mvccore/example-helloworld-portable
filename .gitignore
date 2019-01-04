@@ -53,6 +53,8 @@ Temporary Items
 
 # Application third party modules contents
 *.lock
+*.phpproj
+*.phpproj.user
 vendor/*
 development/*
 release/Var/Logs/*
