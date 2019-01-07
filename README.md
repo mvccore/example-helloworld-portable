@@ -27,7 +27,7 @@ composer update
 
 ## Packed Result Features
 
-- **Result** is **completelly portable** - `./example-helloworld-portable/release/index.php`
+- **Result** is **completely portable** - `./example-helloworld-portable/release/index.php`
 - Result application is **currently packed in strict package mode**
 - All packing configurations are included in `./build/configs` directory
 - Packed with [**Packager library (`mvccore/packager`)**](https://github.com/mvccore/packager), all packing ways possible:
