@@ -1,19 +1,23 @@
 <?php
 
-// If you want to use this config, you need to copy manually everything 'from' => 'to':
-// - '/development/static/fonts'		=> '/release/static/fonts'
-// - '/development/static/img'			=> '/release/static/img'
-// - '/development/Var/Tmp'				=> '/release/Var/Tmp'
-// - '/development/App/Views/Layouts'	=> '/release/App/Views/Layouts'
-// - '/development/App/Views/Scripts'	=> '/release/App/Views/Scripts'
-// and you need to uncomment line 22 in Bootstrap.php
-// before compilation to generate css/js files properly in tmp
+/**
+ * Instructions before application packing:
+ * - Remove all CSS and JS assets in `/Var/Tmp` directory.
+ * - Generate CSS and JS assets into `/Var/Tmp` directory before packing process
+ *   with uncommented line 22 in `/App/Bootstrap.php`.
+ */
 
 $phpFileSystemMode = Packager_Php::FS_MODE_STRICT_HDD;
 
 $config = [
 	'sourcesDir'				=> __DIR__ . '/../../development',
-	'releaseFile'				=> __DIR__ . '/../../release/index.php',
+	'releaseDir'				=> __DIR__ . '/../../release',
+	// define statically copied files and folders (exclude patterns doesn't exclude anything from static copies):
+	'staticCopies'				=> [
+		'/.htaccess',			'/web.config',
+		'/static/fonts',		'/static/img',	'/Var/Tmp',
+		'/App/Views/Layouts',	'/App/Views/Scripts'
+	],
 	// do not include script or file, where it's relative path from sourceDir match any of these rules:
 	'excludePatterns'			=> [
 

@@ -2,7 +2,11 @@
 
 $config = [
 	'sourcesDir'			=> __DIR__ . '/../../development',
-	'releaseFile'			=> __DIR__ . '/../../release/index.php',
+	'releaseDir'			=> __DIR__ . '/../../release',
+	// define statically copied files and folders (exclude patterns doesn't exclude anything from static copies):
+	'staticCopies'				=> [
+		'/.htaccess',		'/web.config',
+	],
 	// do not include script or file, where it's relative path from sourceDir match any of these rules:
 	'excludePatterns'		=> [
 
