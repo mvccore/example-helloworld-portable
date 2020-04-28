@@ -51,11 +51,9 @@ $config = [
 	// (replacements are executed before configured minification in RAM, they don't affect anything on hard drive)
 	'stringReplacements'	=> [
 		// Switch \MvcCore application back from SFU mode to automatic compile mode detection
-		'->Run(1);'									=> '->Run();',
-		'->Run(TRUE);'								=> '->Run();',
-		'->Run(true);'								=> '->Run();',
+		'->SetCompiled(\MvcCore\Application::COMPILED_SFU)'	=> '',
 		// Remove tracy debug library:
-		"class_exists('\MvcCore\Ext\Debugs\Tracy')"	=> 'FALSE',
+		"class_exists('\MvcCore\Ext\Debugs\Tracy')"			=> 'FALSE',
 	],
 	'minifyTemplates'		=> 1,// Remove non-conditional comments and white spaces
 	'minifyPhp'				=> 1,// Remove comments and white spaces
