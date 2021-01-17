@@ -1,21 +1,23 @@
 {
 	"name": "mvccore/example-helloworld-portable",
 	"type": "project",
-	"description": "MvcCore Example - Hello World [portable] - basic application packing demonstration.",
+	"description": "MvcCore - Example - Hello World For Portable Packing - basic application packing demonstration.",
 	"keywords": [
-		"mvccore", 
-		"single-file", 
-		"application", 
-		"portable", 
-		"packing", 
-		"building", 
+		"mvccore",
+		"single-file",
+		"application",
+		"portable",
+		"packing",
+		"building",
 		"hello-world"
 	],
-	"license": ["BSD-3-Clause"],
-	"authors": [{
-		"name": "Tom Flidr",
-		"homepage": "https://github.com/tomFlidr"
-	}],
+	"license": [ "BSD-3-Clause" ],
+	"authors": [
+		{
+			"name": "Tom Flidr",
+			"homepage": "https://github.com/tomFlidr"
+		}
+	],
 	"require": {
 		"php": ">=5.4.0",
 		"mrclay/minify": "2.3.*",

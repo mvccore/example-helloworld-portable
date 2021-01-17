@@ -1,7 +1,7 @@
-# MvcCore - Example - Hello World [portable]
+# MvcCore - Example - Hello World For Portable Packing
 
 [![Latest Stable Version](https://img.shields.io/badge/Stable-v5.0.0-brightgreen.svg?style=plastic)](https://github.com/mvccore/example-helloworld-portable/releases)
-[![License](https://img.shields.io/badge/Licence-BSD-brightgreen.svg?style=plastic)](https://github.com/mvccore/example-helloworld-portable/blob/master/LICENCE.md)
+[![License](https://img.shields.io/badge/License-BSD%203-brightgreen.svg?style=plastic)](https://mvccore.github.io/docs/mvccore/5.0.0/LICENCE.md)
 [![Packager Build](https://img.shields.io/badge/Packager%20Build-passing-brightgreen.svg?style=plastic)](https://github.com/mvccore/packager)
 ![PHP Version](https://img.shields.io/badge/PHP->=5.4-brightgreen.svg?style=plastic)
 
@@ -10,10 +10,10 @@ Skeleton for MvcCore [Hello World (`mvccore/example-helloworld`)](https://github
 ## Instalation
 ```shell
 # load hello world portable project skeleton
-composer create-project mvccore/example-helloworld-portable
+composer create-project mvccore/example-helloworld-portable ./my-helloworld-portable 
 
 # go to portable project skeleton directory
-cd example-helloworld-portable
+cd my-helloworld-portable
 
 # load hello world project
 composer create-project mvccore/example-helloworld ./development
