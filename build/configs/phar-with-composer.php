@@ -23,7 +23,9 @@ $config = [
 		"#^/vendor/tracy/tracy/(.*)/assets/#",			//   excluded everything except statically
 		"#^/vendor/tracy/tracy/tools/#",				//   loaded PHP scripts by composer - added later
 		"#^/vendor/mvccore/ext-debug-tracy.*#",			// - mvccore tracy adapter and all tracy panel extensions
-		"#^/vendor/mrclay/.*#",							// - HTML/JS/CSS minify library
+		"#^/vendor/bin/.*#",							// CLI tools
+		"#^/vendor/tedivm/.*#",							// JS minify library
+		"#^/vendor/tubalmartin/.*#",					// CSS minify library
 
 		// Exclude source css and js files, use only what is generated in '/Var/Tmp' dir
 		"#^/static/js#",
