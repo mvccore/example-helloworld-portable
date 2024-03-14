@@ -57,7 +57,7 @@ Temporary Items
 .vs
 *.phpproj.user
 vendor/*
-development/*
+development
 release/Var/Logs/*
 composer-update-dev.*
 composer-update.*
