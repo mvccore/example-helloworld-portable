@@ -21,7 +21,8 @@
 	"require": {
 		"php": ">=5.4.0",
 		"mrclay/minify": "2.3.*",
-		"mvccore/packager": "2.*"
+		"mvccore/packager": "^2.5"
 	},
-	"minimum-stability": "stable"
+	"minimum-stability": "dev",
+	"prefer-stable": true
 }
